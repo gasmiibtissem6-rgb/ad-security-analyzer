@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD Security Report - test.local</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #0a0e1a; color: #e0e6f0; }
+        .header { background: linear-gradient(135deg, #1a1f35, #0d1117); padding: 40px; border-bottom: 2px solid #ff4757; }
+        .header h1 { font-size: 2.5em; color: #ff4757; letter-spacing: 3px; }
+        .header p { color: #8892a4; margin-top: 10px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 30px; }
+        .score-card { background: #1a1f35; border-radius: 15px; padding: 30px; text-align: center; margin: 20px 0; border: 2px solid #f39c12; }
+        .score-number { font-size: 5em; font-weight: bold; color: #f39c12; }
+        .score-label { font-size: 1.5em; color: #f39c12; letter-spacing: 5px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin: 20px 0; }
+        .stat-card { background: #1a1f35; border-radius: 10px; padding: 20px; text-align: center; border-top: 3px solid #00d2ff; }
+        .stat-number { font-size: 2.5em; font-weight: bold; color: #00d2ff; }
+        .stat-label { color: #8892a4; font-size: 0.9em; margin-top: 5px; }
+        .section { background: #1a1f35; border-radius: 10px; padding: 25px; margin: 20px 0; }
+        .section h2 { color: #ff4757; margin-bottom: 15px; font-size: 1.3em; border-bottom: 1px solid #2a2f45; padding-bottom: 10px; }
+        .critical-item { color: #ff4757; padding: 8px; border-left: 3px solid #ff4757; margin: 8px 0; list-style: none; background: rgba(255,71,87,0.1); border-radius: 5px; }
+        .medium-item { color: #ffa502; padding: 8px; border-left: 3px solid #ffa502; margin: 8px 0; list-style: none; background: rgba(255,165,2,0.1); border-radius: 5px; }
+        .reco-item { color: #2ecc71; padding: 8px; border-left: 3px solid #2ecc71; margin: 8px 0; list-style: none; background: rgba(46,204,113,0.1); border-radius: 5px; }
+        .badge-danger { background: #ff4757; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.85em; margin: 3px; display: inline-block; }
+        .summary-box { background: rgba(0,210,255,0.1); border: 1px solid #00d2ff; border-radius: 10px; padding: 20px; color: #00d2ff; line-height: 1.8; }
+        .footer { text-align: center; padding: 30px; color: #8892a4; border-top: 1px solid #2a2f45; margin-top: 40px; }
+        .target-info { display: flex; gap: 20px; margin-top: 15px; }
+        .target-badge { background: #2a2f45; padding: 8px 15px; border-radius: 20px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔐 AD SECURITY ANALYZER</h1>
+        <p>Rapport d'analyse de sécurité Active Directory — Propulsé par IA</p>
+        <div class="target-info">
+            <span class="target-badge">🎯 Cible: 127.0.0.1</span>
+            <span class="target-badge">🏢 Domaine: test.local</span>
+            <span class="target-badge">📅 2026-06-03 23:36:41</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="score-card">
+            <div class="score-number">60</div>
+            <div class="score-label">SCORE DE SÉCURITÉ — MOYEN</div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">👤 Utilisateurs AD</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">👥 Groupes AD</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">0</div>
+                <div class="stat-label">🖥️ Machines</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10</div>
+                <div class="stat-label">🔌 Ports ouverts</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔴 Vulnérabilités Critiques</h2>
+            <ul><li class="critical-item">Aucune vulnérabilité critique détectée</li></ul>
+        </div>
+
+        <div class="section">
+            <h2>🟡 Risques Moyens</h2>
+            <ul><li class="medium-item">Aucun risque moyen détecté</li></ul>
+        </div>
+
+        <div class="section">
+            <h2>⚠️ Comptes Kerberoastables (SPN)</h2>
+            <p><span style="color:#8892a4">Aucun compte avec SPN détecté</span></p>
+        </div>
+
+        <div class="section">
+            <h2>✅ Recommandations</h2>
+            <ul><li class="reco-item">Aucune recommandation spécifique</li></ul>
+        </div>
+
+        <div class="section">
+            <h2>📋 Résumé Exécutif</h2>
+            <div class="summary-box"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>AD Security Analyzer — Généré automatiquement par IA (Ollama/llama3)</p>
+        <p style="margin-top:5px; font-size:0.8em;">⚠️ Usage autorisé uniquement sur environnements dont vous avez la permission</p>
+    </div>
+</body>
+</html>
